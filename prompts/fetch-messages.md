@@ -4,6 +4,19 @@ id: fetch-messages
 title: Fetch Messages
 description: "Retrieves and structures Slack messages from configured channels via MCP"
 tags: [Production, Messaging]
+inputs:
+  channels:
+    label: "Channels"
+    description: "Slack channels to monitor (comma-separated). Leave empty for all public channels."
+    example: "general, engineering, product"
+    required: false
+    type: text
+  lookback_hours:
+    label: "Lookback Hours"
+    description: "How many hours of message history to fetch"
+    example: "12"
+    required: false
+    type: text
 connections:
   - target: message-fetch
     type: derived_from
