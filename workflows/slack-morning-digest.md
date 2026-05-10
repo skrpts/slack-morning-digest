@@ -38,15 +38,26 @@ execution:
     - skill: "channel-categorisation"
       step_type: "synthesis"
       prompt: "categorise-channels"
+      context:
+        voice_profile: ""
+        channel_grouping: ""
     - skill: "urgency-triage"
       step_type: "synthesis"
       prompt: "triage-urgency"
+      context:
+        urgency_sensitivity: ""
   - skill: "digest-synthesis"
     step_type: "synthesis"
     prompt: "synthesise-digest"
+    context:
+      voice_profile: ""
+      digest_length: ""
   - skill: "language-polish"
     step_type: "content"
     prompt: "polish-digest"
+    context:
+      voice_profile: ""
+      grammar_strictness: ""
 ---
 
 ## Overview
