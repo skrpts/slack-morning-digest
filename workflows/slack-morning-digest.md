@@ -39,25 +39,25 @@ execution:
       step_type: "synthesis"
       prompt: "categorise-channels"
       context:
-        voice_profile: ""
-        channel_grouping: ""
+        voice_profile: "Neutral professional tone"
+        channel_grouping: "Automatic"
     - skill: "urgency-triage"
       step_type: "synthesis"
       prompt: "triage-urgency"
       context:
-        urgency_sensitivity: ""
+        urgency_sensitivity: "Standard"
   - skill: "digest-synthesis"
     step_type: "synthesis"
     prompt: "synthesise-digest"
     context:
-      voice_profile: ""
-      digest_length: ""
+      voice_profile: "Neutral professional tone"
+      digest_length: "Standard"
   - skill: "language-polish"
     step_type: "content"
     prompt: "polish-digest"
     context:
-      voice_profile: ""
-      grammar_strictness: ""
+      voice_profile: "Neutral professional tone"
+      grammar_strictness: "Professional"
 ---
 
 ## Overview
