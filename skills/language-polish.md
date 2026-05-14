@@ -37,7 +37,7 @@ This is a surface-level polish — it does NOT rewrite for tone, restructure arg
 2. **Punctuation** — fixes missing or misplaced commas, full stops, semicolons, and quotation marks
 3. **Sentence clarity** — simplifies unnecessarily complex sentences without changing meaning
 4. **Word choice** — replaces jargon or vague phrasing with clearer alternatives where the meaning is unambiguous
-5. **Consistency** — standardises British English spelling throughout
+5. **Consistency** — standardises British/American English spelling within a single document (does not choose which — preserves the document's existing convention)
 
 ## What It Does NOT Do
 
@@ -45,7 +45,12 @@ This is a surface-level polish — it does NOT rewrite for tone, restructure arg
 - Add or remove content
 - Restructure paragraphs or arguments
 - Check factual claims or citations
+- Enforce a specific style guide (use `brief-compliance-check` or `consistency-check` for that)
+
+## Inputs
+
+Text content to polish.
 
 ## Outputs
 
-Polished text with corrections applied.
+Polished text with corrections applied. Optionally, a list of changes made.
