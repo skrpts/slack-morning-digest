@@ -3,7 +3,7 @@ id: "a0578e58-efea-4550-a36a-2be247861324"
 name: "slack-morning-digest"
 display_name: "Slack Morning Digest"
 description: "Pulls overnight Slack messages via MCP, categorises by channel and urgency, and produces a personalised morning briefing"
-version: "1.0.5"
+version: "1.0.6"
 engine: ">=0.1.0"
 
 # --- Attribution ---
