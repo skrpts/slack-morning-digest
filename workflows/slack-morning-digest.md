@@ -9,7 +9,7 @@ connections:
     type: uses
   - target: channel-categorisation
     type: uses
-  - target: urgency-triage
+  - target: triage-slack-urgency
     type: uses
   - target: digest-synthesis
     type: uses
@@ -27,7 +27,7 @@ output_step: "language-polish"
 composite_steps:
   - "message-fetch"
   - "channel-categorisation"
-  - "urgency-triage"
+  - "triage-slack-urgency"
   - "digest-synthesis"
   - "language-polish"
 execution:
@@ -41,9 +41,9 @@ execution:
       context:
         voice_profile: "Neutral professional tone"
         channel_grouping: "Automatic"
-    - skill: "urgency-triage"
+    - skill: "triage-slack-urgency"
       step_type: "synthesis"
-      prompt: "triage-urgency"
+      prompt: "triage-slack-urgency"
       context:
         urgency_sensitivity: "Standard"
   - skill: "digest-synthesis"
@@ -84,7 +84,7 @@ Two analysis agents run concurrently:
 
 Groups messages by channel (default), by topic (cross-channel themes), or by team. Configurable via the `channel_grouping` persona dial.
 
-#### 2b. Urgency Triage
+#### 2b. Triage Urgency
 
 Classifies each message as action-required, FYI, or background. Configurable via the `urgency_sensitivity` persona dial (Relaxed, Standard, Aggressive).
 

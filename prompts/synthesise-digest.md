@@ -51,7 +51,7 @@ You are a briefing synthesis agent. Combine the categorised messages and urgency
 ### Input
 
 - **Categories:** {{steps.Channel Categorisation.output}}
-- **Triage:** {{steps.Urgency Triage.output}}
+- **Triage:** {{steps.Triage Urgency.output}}
 
 ### Formatting Rules
 
