@@ -3,7 +3,7 @@ id: "33bd7f73-08eb-42f0-ba51-3a45dc6a2feb"
 name: "slack-morning-digest"
 display_name: "Slack Morning Digest"
 description: "Pulls overnight Slack messages via MCP, categorises by channel and urgency, and produces a personalised morning briefing"
-version: "1.0.14"
+version: "1.0.15"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -57,3 +57,17 @@ contents:
   documents: 0
   assets: 0
   total: 9
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-03T11:09:11.337Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: ["llm-service"]
+    permissions: ["network:api.slack.com"]
+    data_handling: ["pii"]
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/slack-morning-digest/security"

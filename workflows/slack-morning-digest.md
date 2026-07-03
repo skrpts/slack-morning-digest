@@ -34,27 +34,32 @@ execution:
   - skill: "message-fetch"
     step_type: "generation"
     prompt: "fetch-messages"
+    output: { name: "messages", type: "text" }
   - parallel:
     - skill: "channel-categorisation"
       step_type: "synthesis"
       prompt: "categorise-channels"
+      output: { name: "categorised_channels", type: "text" }
       context:
         voice_profile: "Neutral professional tone"
         channel_grouping: "Automatic"
     - skill: "triage-slack-urgency"
       step_type: "synthesis"
       prompt: "triage-slack-urgency"
+      output: { name: "urgency_triage", type: "text" }
       context:
         urgency_sensitivity: "Standard"
   - skill: "digest-synthesis"
     step_type: "synthesis"
     prompt: "synthesise-digest"
+    output: { name: "digest", type: "text" }
     context:
       voice_profile: "Neutral professional tone"
       digest_length: "Standard"
   - skill: "language-polish"
     step_type: "content"
     prompt: "polish-digest"
+    output: { name: "polished_digest", type: "text" }
     context:
       voice_profile: "Neutral professional tone"
       grammar_strictness: "Professional"
