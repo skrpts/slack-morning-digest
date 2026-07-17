@@ -73,4 +73,4 @@ Slack API rate limits vary by method (typically 1–50 requests per minute per m
 
 ## Privacy Considerations
 
-All Slack messages accessed through this service are sent to your configured LLM provider for categorisation and summarisation. Messages may contain PII (names, email addresses, personal information). The `data_handling: pii` declaration in the manifest makes this explicit during import. Ensure your organisation's policies permit sending Slack content to third-party AI services.
+All Slack messages accessed through this service are sent to your configured LLM provider for categorization and summarization. Messages may contain PII (names, email addresses, personal information). The `data_handling: pii` declaration in the manifest makes this explicit during import. Ensure your organization's policies permit sending Slack content to third-party AI services.

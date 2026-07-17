@@ -1,7 +1,7 @@
 ---
 type: prompt
 id: categorise-channels
-title: Categorise Channels
+title: Categorize Channels
 description: "Groups fetched messages by channel, topic, or team"
 tags: [Production, Messaging]
 connections:
@@ -28,7 +28,7 @@ If a voice profile is provided above, write category labels and summaries in tha
 
 ## Prompt
 
-You are a categorisation agent. Group the messages below according to the configured grouping mode.
+You are a categorization agent. Group the messages below according to the configured grouping mode.
 
 ### Grouping Modes
 

@@ -2,7 +2,7 @@
 type: skill
 id: digest-synthesis
 title: Digest Synthesis
-description: "Combines categorised and triaged messages into a readable morning briefing"
+description: "Combines categorized and triaged messages into a readable morning briefing"
 tags: [Production, Messaging]
 connections:
   - target: llm-service
@@ -21,17 +21,17 @@ context_params:
 
 ## Capability
 
-Merges the categorised message groups and urgency triage results into a single, readable morning briefing document. Prioritises action items, highlights key updates, and optionally includes background context.
+Merges the categorized message groups and urgency triage results into a single, readable morning briefing document. Prioritizes action items, highlights key updates, and optionally includes background context.
 
 ## When to Use
 
-- After the parallel categorisation and triage steps have completed
+- After the parallel categorization and triage steps have completed
 - As the main synthesis step in a digest pipeline
 
 ## What It Does
 
 1. **Action items first** — leads with messages classified as action-required, grouped by urgency
-2. **Key updates** — follows with FYI items, summarised by category
+2. **Key updates** — follows with FYI items, summarized by category
 3. **Background** (Detailed only) — includes a brief summary of background activity for full context
 4. **Cross-references** — notes related threads across channels (e.g. the same topic discussed in #engineering and #product)
 

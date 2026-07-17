@@ -1,8 +1,8 @@
 ---
 type: prompt
 id: synthesise-digest
-title: Synthesise Digest
-description: "Combines categorised and triaged messages into a morning briefing document"
+title: Synthesize Digest
+description: "Combines categorized and triaged messages into a morning briefing document"
 tags: [Production, Messaging]
 connections:
   - target: digest-synthesis
@@ -28,7 +28,7 @@ If a voice profile is provided above, write the entire digest in that voice — 
 
 ## Prompt
 
-You are a briefing synthesis agent. Combine the categorised messages and urgency triage below into a morning digest document.
+You are a briefing synthesis agent. Combine the categorized messages and urgency triage below into a morning digest document.
 
 ### Structure
 
@@ -50,8 +50,8 @@ You are a briefing synthesis agent. Combine the categorised messages and urgency
 
 ### Input
 
-- **Categories:** {{steps.Channel Categorisation.output}}
-- **Triage:** {{steps.Triage Urgency.output}}
+- **Categories:** {{steps.Channel Categorization.output}}
+- **Triage:** {{steps.Urgency Triage.output}}
 
 ### Formatting Rules
 

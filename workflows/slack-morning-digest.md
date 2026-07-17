@@ -2,14 +2,14 @@
 type: workflow
 id: slack-morning-digest
 title: Slack Morning Digest
-description: "Fetches Slack messages via MCP, categorises and triages, then produces a personalised morning briefing"
+description: "Fetches Slack messages via MCP, categorizes and triages, then produces a personalized morning briefing"
 tags: [Production, Messaging]
 connections:
   - target: message-fetch
     type: uses
   - target: channel-categorisation
     type: uses
-  - target: triage-slack-urgency
+  - target: urgency-triage
     type: uses
   - target: digest-synthesis
     type: uses
@@ -27,7 +27,7 @@ output_step: "language-polish"
 composite_steps:
   - "message-fetch"
   - "channel-categorisation"
-  - "triage-slack-urgency"
+  - "urgency-triage"
   - "digest-synthesis"
   - "language-polish"
 execution:
@@ -43,9 +43,9 @@ execution:
       context:
         voice_profile: "Neutral professional tone"
         channel_grouping: "Automatic"
-    - skill: "triage-slack-urgency"
-      step_type: "synthesis"
+    - skill: "urgency-triage"
       prompt: "triage-slack-urgency"
+      step_type: "synthesis"
       output: { name: "urgency_triage", type: "text" }
       context:
         urgency_sensitivity: "Standard"
@@ -67,7 +67,7 @@ execution:
 
 ## Overview
 
-This workflow produces a personalised morning briefing from your Slack workspace. It fetches recent messages from configured channels, runs two parallel analysis passes (categorisation and urgency triage), synthesises the results into a readable digest, and applies a final language polish.
+This workflow produces a personalized morning briefing from your Slack workspace. It fetches recent messages from configured channels, runs two parallel analysis passes (categorization and urgency triage), synthesizes the results into a readable digest, and applies a final language polish.
 
 The digest adapts to your preferences: choose how messages are grouped (by channel, topic, or team), how aggressively items are flagged as urgent, and how detailed the final briefing should be.
 
@@ -85,7 +85,7 @@ Using the Slack MCP service, fetch recent messages from configured channels. Res
 
 Two analysis agents run concurrently:
 
-#### 2a. Channel Categorisation
+#### 2a. Channel Categorization
 
 Groups messages by channel (default), by topic (cross-channel themes), or by team. Configurable via the `channel_grouping` persona dial.
 
@@ -95,7 +95,7 @@ Classifies each message as action-required, FYI, or background. Configurable via
 
 ### Stage 3: Digest Synthesis
 
-Combines the categorised message groups and urgency classifications into a single briefing document. Leads with action items, follows with key updates, and optionally includes background context. Length controlled by the `digest_length` persona dial (Brief, Standard, Detailed).
+Combines the categorized message groups and urgency classifications into a single briefing document. Leads with action items, follows with key updates, and optionally includes background context. Length controlled by the `digest_length` persona dial (Brief, Standard, Detailed).
 
 ### Stage 4: Language Polish
 
@@ -133,7 +133,7 @@ Before running this workflow:
 
 ## Provider Notes
 
-- Categorisation and triage are analytical tasks — most models handle them well.
+- Categorization and triage are analytical tasks — most models handle them well.
 - Digest synthesis benefits from a model with strong writing capabilities.
 - The pipeline is moderate on token usage — no long-context requirements.
 

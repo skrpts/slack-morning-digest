@@ -1,7 +1,7 @@
 ---
 type: skill
 id: channel-categorisation
-title: Channel Categorisation
+title: Channel Categorization
 description: "Groups messages by channel, topic, or team — producing a structured category map"
 tags: [Production, Messaging]
 connections:

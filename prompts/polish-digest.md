@@ -14,7 +14,7 @@ metadata:
 
 ## Purpose
 
-Applies final language polish to the synthesised digest — spelling, grammar, clarity, and voice consistency.
+Applies final language polish to the synthesized digest — spelling, grammar, clarity, and voice consistency.
 
 ## Voice Profile
 
