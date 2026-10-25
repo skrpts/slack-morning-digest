@@ -49,6 +49,10 @@ execution:
       output: { name: "urgency_triage", type: "text" }
       context:
         urgency_sensitivity: "Standard"
+      bindings:
+        source:
+          from_step: "Message Fetch"
+          field: output
   - skill: "digest-synthesis"
     step_type: "synthesis"
     prompt: "synthesise-digest"
